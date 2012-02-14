@@ -1,0 +1,20 @@
+# Elog
+
+erlang error log library extracted from ejabberd.
+
+# How to use
+
+elog:init(Level, LogFile).
+
+?PRINT(Format, Args),
+
+?DEBUG(Format, Args).
+
+?INFO(Format, Args),
+
+?WARNING(Format, Args),
+
+?ERROR(Format, Args),
+
+?CRITICAL(Format, Args),
+
