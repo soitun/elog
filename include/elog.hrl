@@ -7,7 +7,6 @@
 %%%
 %%% Copyright (C) 2007-2009, www.opengoss.com 
 %%%----------------------------------------------------------------------
--define(ELOG_VERSION, "2.0").
 
 %% ---------------------------------
 %% Logging mechanism
@@ -16,17 +15,47 @@
     io:format(Format, Args)).
 
 -define(DEBUG(Format, Args),
-    elog_logger:debug_msg(?MODULE,?LINE,Format, Args)).
+    lager:debug(Format, Args)).
+
+-define(DEBUG_TRACE(Dest, Format, Args),
+    lager:debug(Dest, Format, Args)).
+
+-define(DEBUG_MSG(Msg),
+    lager:debug(Msg)).
 
 -define(INFO(Format, Args),
-    elog_logger:info_msg(?MODULE,?LINE,Format, Args)).
+    lager:info(Format, Args)).
+
+-define(INFO_TRACE(Dest, Format, Args),
+    lager:info(Dest, Format, Args)).
+
+-define(INFO_MSG(Msg),
+    lager:info(Msg)).
 			      
 -define(WARNING(Format, Args),
-    elog_logger:warning_msg(?MODULE,?LINE,Format, Args)).
+    lager:warning(Format, Args)).
+
+-define(WARNING_TRACE(Dest, Format, Args),
+    lager:warning(Dest, Format, Args)).
+
+-define(WARNING_MSG(Msg),
+    lager:warning(Msg)).
 			      
 -define(ERROR(Format, Args),
-    elog_logger:error_msg(?MODULE,?LINE,Format, Args)).
+    lager:error(Format, Args)).
+
+-define(ERROR_TRACE(Dest, Format, Args),
+    lager:error(Dest, Format, Args)).
+
+-define(ERROR_MSG(Msg),
+    lager:error(Msg)).
 
 -define(CRITICAL(Format, Args),
-    elog_logger:critical_msg(?MODULE,?LINE,Format, Args)).
+    lager:critical(Format, Args)).
+
+-define(CRITICAL_TRACE(Dest, Format, Args),
+    lager:critical(Dest, Format, Args)).
+
+-define(CRITICAL_MSG(Msg),
+    lager:critical(Msg)).
 

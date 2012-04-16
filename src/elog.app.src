@@ -1,8 +1,6 @@
 {application, elog,
  [{description, "elog"},
   {vsn, "1.0.1"},
-  {modules, [elog, 
-             elog_logger_h, 
-             dynamic_compile]},
+  {modules, [elog]},
   {registered, []},
-  {applications, []}]}.
+  {applications, [lager]}]}.
