@@ -1,10 +1,8 @@
 # Elog
 
-erlang error log library extracted from ejabberd.
+loger wrapper for lager
 
 # How to use
-
-elog:init(Level, LogFile).
 
 ?PRINT(Format, Args),
 
