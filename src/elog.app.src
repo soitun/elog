@@ -1,6 +1,6 @@
 {application, elog,
  [{description, "elog"},
-  {vsn, "2.0"},
+  {vsn, "2.1"},
   {modules, [elog, elog_app, elog_sup]},
   {registered, []},
   {applications, [kernel, stdlib]},
