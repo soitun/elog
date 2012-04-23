@@ -10,9 +10,11 @@
 
 %% ---------------------------------
 %% Logging mechanism
-
 -define(PRINT(Format, Args),
     io:format(Format, Args)).
+
+-define(PRINT_MSG(Format),
+    io:format(Format)).
 
 -define(DEBUG(Format, Args),
     lager:debug(Format, Args)).
