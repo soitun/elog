@@ -1,6 +1,7 @@
 {application, elog,
  [{description, "elog"},
-  {vsn, "1.0.1"},
-  {modules, [elog]},
+  {vsn, "2.0"},
+  {modules, [elog, elog_app, elog_sup]},
   {registered, []},
-  {applications, [lager]}]}.
+  {applications, [kernel, stdlib]},
+  {mod, {elog_app, []}}]}.
