@@ -33,6 +33,15 @@
 
 -define(INFO_MSG(Msg),
     lager:info(Msg)).
+
+-define(WARN(Format, Args),
+    lager:warning(Format, Args)).
+
+-define(WARN_TRACE(Dest, Format, Args),
+    lager:warning(Dest, Format, Args)).
+
+-define(WARN_MSG(Msg),
+    lager:warning(Msg)).
 			      
 -define(WARNING(Format, Args),
     lager:warning(Format, Args)).
